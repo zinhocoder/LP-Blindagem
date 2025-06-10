@@ -8,9 +8,9 @@ import Image from "next/image"
 import { useState } from "react"
 
 export default function BlindagemLanding() {
-  const handleCTA = () => {
-    // Aqui você pode adicionar a lógica de conversão
-    console.log("CTA clicado - redirecionar para checkout")
+ const handleCTA = () => {
+  console.log("CTA clicado - redirecionar para checkout");
+  window.open("https://pay.kiwify.com.br/2467E0g", "_blank");
   }
 
   const [openFaq, setOpenFaq] = useState<number | null>(null)
