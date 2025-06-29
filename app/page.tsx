@@ -509,6 +509,23 @@ export default function BlindagemLanding() {
 
       {/* Espaçamento para CTA fixo mobile */}
       <div className="h-20 md:h-0"></div>
+
+      {/* Copyright Section */}
+      <footer className="py-6 px-4 bg-black border-t border-[#FF0000]/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-white/70 text-sm">
+            © 2024 Blindagem Contra Amantes. Desenvolvido por{" "}
+            <a 
+              href="https://www.devpro.fun" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#FF0000] font-semibold hover:text-[#FF0000]/80 transition-colors"
+            >
+              DevPro
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
