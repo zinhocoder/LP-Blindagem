@@ -120,6 +120,39 @@ export default function BlindagemLanding() {
         </div>
       </section>
 
+      {/* VSL Section */}
+      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
+            Assista ao <span className="text-[#FF0000]">Vídeo Completo</span>
+          </h2>
+          <div className="bg-[#FF0000]/10 rounded-lg p-6 md:p-8 border border-[#FF0000]/30 shadow-[0_0_20px_rgba(255,0,0,0.2)]">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/q2I9bdPCr5w"
+                title="Blindagem Contra Amantes - VSL Completo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-white text-lg md:text-xl leading-relaxed mb-4">
+                <span className="text-[#FF0000] font-bold">Não perca tempo!</span> Assista ao vídeo completo e descubra como o método Blindagem Contra Amantes pode salvar seu relacionamento.
+              </p>
+              <Button
+                onClick={handleCTA}
+                className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
+              >
+                Quero blindar meu relacionamento
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sinais Section */}
       <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[#FF0000]/5"></div>
