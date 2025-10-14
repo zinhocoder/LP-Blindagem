@@ -3,14 +3,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Gift, Clock, CheckCircle, Sparkles, Lock, ChevronDown } from "lucide-react"
+import { Heart, Sparkles, Brain, Zap, Crown, Moon, CheckCircle, ChevronDown, Gift, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 
-export default function BlindagemLanding() {
- const handleCTA = () => {
-  console.log("CTA clicado - redirecionar para checkout");
-  window.open("https://pay.kiwify.com.br/2467E0g", "_blank");
+export default function ApegoMagnetico() {
+  const handleCTA = () => {
+    console.log("CTA clicado - redirecionar para checkout");
+    window.open("https://pay.kiwify.com.br/2467E0g", "_blank");
   }
 
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -21,441 +21,529 @@ export default function BlindagemLanding() {
 
   const faqData = [
     {
-      question: "O método Blindagem Contra Amantes realmente funciona?",
+      question: "Para quem é o Apego Magnético?",
       answer:
-        "Sim! O método já ajudou centenas de mulheres a recuperar seus casamentos, mesmo em situações extremas. É baseado em técnicas psicológicas comprovadas e abordagem emocional estratégica.",
+        "Para mulheres que decidiram abandonar a dor do apego ansioso e ativar seu poder de presença. Se você se cansou de correr atrás, de tentar ser 'menos intensa' para ser aceita, este guia é para você.",
     },
     {
-      question: "Quanto tempo leva para ver resultados?",
+      question: "Isso é manipulação?",
       answer:
-        "Os primeiros sinais de mudança podem aparecer em poucos dias, mas recomendamos seguir o protocolo completo por pelo menos 30 dias para resultados duradouros e transformação profunda do relacionamento.",
+        "Não. É consciência. O Apego Magnético te ensina a retornar à sua essência, não a fingir ser quem você não é. É sobre presença autêntica, não jogos ou máscaras.",
     },
     {
-      question: "E se meu marido já está envolvido com outra pessoa?",
+      question: "Preciso estar em um relacionamento para usar?",
       answer:
-        "O método foi desenvolvido justamente para situações críticas como essa. Mesmo em casos de traição confirmada, as técnicas de blindagem emocional podem reconectar vocês e afastar influências externas.",
+        "Não necessariamente. O guia trabalha sua reprogramação emocional e energética. Você pode estar solteira, em um relacionamento ou se recuperando de um — o magnetismo começa em você.",
     },
     {
-      question: "Preciso contar para meu marido que estou fazendo o método?",
+      question: "Como funciona a parte científica?",
       answer:
-        "Não é necessário. O Blindagem Contra Amantes trabalha com mudanças comportamentais e emocionais suas que naturalmente impactam a dinâmica do relacionamento, sem precisar revelar que está seguindo um método específico.",
+        "O guia une neurociência afetiva (como o cérebro processa vínculos), psicologia relacional e energia feminina. Você entenderá os hormônios do apego como vasopressina e ocitocina, e como ativar conexões genuínas.",
     },
     {
-      question: "O método inclui abordagem espiritual?",
+      question: "Quanto tempo leva para ver mudanças?",
       answer:
-        "Sim, para quem desejar. O programa oferece tanto técnicas psicológicas quanto espirituais, permitindo que você escolha a abordagem que mais se alinha com suas crenças pessoais.",
+        "A transformação é interna primeiro. Muitas mulheres relatam mudanças na própria percepção em dias. Mudanças externas (como pessoas reagindo diferente a você) podem acontecer em semanas, conforme você incorpora a presença magnética.",
     },
     {
-      question: "Tenho garantia se não funcionar?",
+      question: "Tenho garantia?",
       answer:
-        "Sim! Oferecemos garantia total. Se você seguir o método conforme orientado e não ver resultados, devolvemos 100% do seu investimento sem questionamentos.",
+        "Sim! Se você aplicar o guia e sentir que não foi o que esperava, devolvemos seu investimento. Nossa garantia é total porque acreditamos na transformação que esse conteúdo proporciona.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-black font-roboto">
-      {/* CTA Fixo */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#FF0000] p-4 shadow-lg md:hidden">
+      {/* CTA Fixo Mobile */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 to-pink-600 p-4 shadow-lg md:hidden">
         <Button
           onClick={handleCTA}
-          className="w-full bg-black text-[#FF0000] hover:bg-gray-900 font-bold py-3 text-lg border-2 border-[#FF0000]"
+          className="w-full bg-black text-white hover:bg-gray-900 font-bold py-3 text-lg border-2 border-white/20"
         >
-          Quero blindar meu relacionamento
+          Despertar Meu Magnetismo
         </Button>
       </div>
 
       {/* Hero Section */}
       <section className="relative bg-black text-white py-8 md:py-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FF0000]/30 to-black z-0"></div>
-        <div className="absolute top-0 right-0 w-full h-full opacity-20">
-          <div className="w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkYwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtMS4zNiAwLTIuNTEuOTUtMi44MyAyLjI0LS4xNS42MS0uNzYgMS0xLjM4Ljg1LS42MS0uMTUtMS0uNzYtLjg1LTEuMzguNTMtMi4xNSAyLjQ1LTMuNzEgNC43MS0zLjcxIDIuNyAwIDQuOSAyLjE5IDQuOSA0Ljl2NC45SDM2di00LjljMC0uNTQtLjQ2LTEtMS0xeiIvPjxwYXRoIGQ9Ik0zMCAzMGMwLTMuMzEgMi42OS02IDYtNnM2IDIuNjkgNiA2LTIuNjkgNi02IDYtNi0yLjY5LTYtNnptNiA0YzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHoiLz48L2c+PC9zdmc+')]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-pink-900/20 to-black z-0"></div>
+        <div className="absolute top-0 right-0 w-full h-full opacity-10">
+          <div className="w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkY2RkI3IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjIiLz48L2c+PC9zdmc+')]"></div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <div className="mb-8">
-                <Shield className="w-16 h-16 text-[#FF0000] mb-4" />
+              <div className="mb-6">
+                <Crown className="w-16 h-16 text-pink-500 mb-4 mx-auto md:mx-0" />
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-                Proteja Seu Casamento <span className="text-[#FF0000]">Antes Que Seja Tarde Demais</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+                APEGO MAGNÉTICO
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 leading-relaxed">
-                Se você sente que seu marido está mais frio, distante ou até mesmo já começou a agir de forma estranha…
+              <p className="text-xl md:text-2xl lg:text-3xl mb-6 leading-relaxed text-pink-100">
+                O Guia Que Desperta Sua Presença Feminina, Reativa Seu Poder e Cria Conexões Impossíveis de Esquecer
               </p>
-              <div className="bg-[#FF0000]/20 backdrop-blur-sm rounded-lg p-6 mb-8 border-l-4 border-[#FF0000]">
-                <p className="text-lg md:text-xl font-semibold">
-                  Essa pode ser a <span className="text-[#FF0000] font-bold">única chance</span> que você tem de evitar
-                  que outra mulher destrua o seu casamento.
+              <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 backdrop-blur-sm rounded-lg p-6 mb-8 border-l-4 border-pink-500">
+                <p className="text-lg md:text-xl font-semibold italic">
+                  "Você não precisa correr atrás. Você precisa lembrar quem é."
                 </p>
               </div>
               <Button
                 onClick={handleCTA}
-                className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
+                className="w-full max-w-md mx-auto md:mx-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-bold py-4 px-8 text-base md:text-lg rounded-full shadow-[0_0_20px_rgba(236,72,153,0.6)] transform hover:scale-105 transition-all"
               >
-                Quero blindar meu relacionamento
+                Despertar Meu Magnetismo
               </Button>
             </div>
             <div className="w-full md:w-1/2 relative">
-              <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-[0_0_30px_rgba(255,0,0,0.4)]">
+              <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-[0_0_40px_rgba(236,72,153,0.4)]">
                 <Image
                   src="/images/hero-woman.jpg"
-                  alt="Mulher elegante em vermelho"
+                  alt="Mulher confiante e magnética"
                   fill
                   style={{ objectFit: "cover" }}
                   priority
                   className="rounded-lg"
                   onError={(e) => {
-                    console.log("Erro ao carregar imagem:", e)
-                    // Fallback para uma cor de fundo se a imagem não carregar
                     e.currentTarget.style.display = "none"
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40"></div>
-                {/* Fallback background se a imagem não carregar */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#FF0000] to-[#990000] opacity-50 rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-purple-900/30 opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-pink-600/30 opacity-50 rounded-lg"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* VSL Section */}
+      {/* Momento de Despertar Section */}
       <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 to-black"></div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            Assista ao <span className="text-[#FF0000]">Vídeo Completo</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            Existe um momento na vida de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">toda mulher</span>
           </h2>
-          <div className="bg-[#FF0000]/10 rounded-lg p-6 md:p-8 border border-[#FF0000]/30 shadow-[0_0_20px_rgba(255,0,0,0.2)]">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/q2I9bdPCr5w"
-                title="Blindagem Contra Amantes - VSL Completo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg p-8 mb-8 border border-pink-500/30 shadow-[0_0_30px_rgba(236,72,153,0.2)]">
+            <div className="flex items-center justify-center mb-6">
+              <Sparkles className="w-12 h-12 text-pink-400" />
             </div>
-            <div className="mt-6 text-center">
-              <p className="text-white text-lg md:text-xl leading-relaxed mb-4">
-                <span className="text-[#FF0000] font-bold">Não perca tempo!</span> Assista ao vídeo completo e descubra como o método Blindagem Contra Amantes pode salvar seu relacionamento.
+            <p className="text-xl md:text-2xl text-center leading-relaxed mb-6 text-pink-100 italic">
+              "Não é sobre quem eu quero conquistar. É sobre quem eu sou quando amo."
+            </p>
+            <div className="space-y-4 text-lg md:text-xl leading-relaxed text-white/90">
+              <p>
+                Se você já se cansou de vínculos que começam com fogo e terminam em silêncio, de correr atrás de respostas, de tentar ser <span className="text-pink-400 font-semibold">"menos intensa"</span> para ser aceita —
               </p>
-              <Button
-                onClick={handleCTA}
-                className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
-              >
-                Quero blindar meu relacionamento
-              </Button>
+              <p className="text-center text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                então este é o seu chamado.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sinais Section */}
-      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+      {/* O Que É Section */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-black to-purple-950/20 relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            Você Está <span className="text-[#FF0000]">Percebendo</span> Estes Sinais?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card className="border-l-4 border-[#FF0000] shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white">
-              <CardContent className="p-6">
-                <Heart className="w-8 h-8 text-[#FF0000] mb-4" />
-                <p className="text-white text-lg">
-                  Talvez você esteja percebendo que ele{" "}
-                  <span className="text-[#FF0000] font-bold">não te elogia mais</span> como antes…
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-l-4 border-[#FF0000] shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white">
-              <CardContent className="p-6">
-                <div className="w-8 h-8 bg-[#FF0000] rounded-full mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold">!</span>
-                </div>
-                <p className="text-white text-lg">
-                  Talvez ele fique <span className="text-[#FF0000] font-bold">irritado com tudo</span>, esconda o
-                  celular…
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-l-4 border-[#FF0000] shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white">
-              <CardContent className="p-6">
-                <div className="w-8 h-8 bg-[#FF0000] rounded-full mb-4 flex items-center justify-center">
-                  <span className="text-white">👤</span>
-                </div>
-                <p className="text-white text-lg">
-                  Ou simplesmente esteja mais presente fisicamente… Mas{" "}
-                  <span className="text-[#FF0000] font-bold">completamente ausente</span> emocionalmente.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Ameaça Section */}
-      <section className="py-8 md:py-16 px-4 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FF0000]/20 to-black"></div>
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            A <span className="text-[#FF0000]">Verdade</span> Que Ninguém Te Conta
-          </h2>
-          <div className="bg-[#FF0000]/10 rounded-lg p-8 mb-8 border border-[#FF0000]/30 shadow-[0_0_20px_rgba(255,0,0,0.2)]">
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              A verdade é que hoje existem mulheres{" "}
-              <span className="text-[#FF0000] font-bold">treinadas, frias, manipuladoras</span>…
+          <div className="text-center mb-12">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+              O Apego Magnético é mais do que um guia.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Elas sabem <span className="text-[#FF0000] font-bold">exatamente</span> como seduzir um homem casado.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Usam táticas psicológicas para fazer ele se sentir desejado e valorizado…
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed font-semibold">
-              E pouco a pouco, <span className="text-[#FF0000] font-bold">tiram ele de dentro da sua casa</span>, mesmo
-              que o corpo dele continue aí.
+            <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mb-6">
+              É uma reprogramação emocional e energética
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+              Para mulheres que decidiram abandonar a dor e ativar o seu poder de <span className="text-pink-400 font-semibold">presença, conexão e magnetismo</span>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Solução Section */}
+      {/* Revolução da Consciência */}
       <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkYwMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtMS4zNiAwLTIuNTEuOTUtMi44MyAyLjI0LS4xNS42MS0uNzYgMS0xLjM4Ljg1LS42MS0uMTUtMS0uNzYtLjg1LTEuMzguNTMtMi4xNSAyLjQ1LTMuNzEgNC43MS0zLjcxIDIuNyAwIDQuOSAyLjE5IDQuOSA0Ljl2NC45SDM2di00LjljMC0uNTQtLjQ2LTEtMS0xeiIvPjxwYXRoIGQ9Ik0zMCAzMGMwLTMuMzEgMi42OS02IDYtNnM2IDIuNjkgNiA2LTIuNjkgNi02IDYtNi0yLjY5LTYtNnptNiA0YzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHoiLz48L2c+PC9zdmc+')] opacity-5"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            A <span className="text-[#FF0000]">Solução</span> Que Você Precisa
-          </h2>
-          <div className="bg-gradient-to-r from-[#FF0000] to-[#990000] text-white rounded-lg p-8 mb-12 shadow-[0_0_30px_rgba(255,0,0,0.4)]">
-            <Shield className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h3 className="text-2xl md:text-4xl font-bold mb-6 drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
-              Blindagem Contra Amantes
-            </h3>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Foi por isso que eu desenvolvi o protocolo completo do{" "}
-              <span className="font-bold">Blindagem Contra Amantes</span>.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Um método <span className="font-bold">estratégico, emocional e comportamental</span>.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed font-semibold">
-              Ele <span className="font-bold">protege seu relacionamento</span> contra influências externas… E{" "}
-              <span className="font-bold">reconecta vocês dois</span> como casal, mesmo que você já esteja sentindo que
-              perdeu o controle.
-            </p>
-          </div>
-          <Button
-            onClick={handleCTA}
-            className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
-          >
-            Quero blindar meu relacionamento
-          </Button>
-        </div>
-      </section>
-
-      {/* Benefícios Section */}
-      <section className="py-8 md:py-16 px-4 bg-black relative">
-        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+        <div className="absolute inset-0 bg-purple-900/5"></div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            O Que Você Vai <span className="text-[#FF0000]">Descobrir</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card className="shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white border border-[#FF0000]/30">
-              <CardContent className="p-6">
-                <CheckCircle className="w-8 h-8 text-[#FF0000] mb-4" />
-                <p className="text-white text-lg leading-relaxed">
-                  Dentro do método Blindagem Contra Amantes, você vai descobrir como{" "}
-                  <span className="text-[#FF0000] font-bold">identificar os sinais invisíveis</span> de aproximação de
-                  uma amante… Antes que ela se torne uma ameaça real.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white border border-[#FF0000]/30">
-              <CardContent className="p-6">
-                <Heart className="w-8 h-8 text-[#FF0000] mb-4" />
-                <p className="text-white text-lg leading-relaxed">
-                  Vai aprender o <span className="text-[#FF0000] font-bold">"Código da Presença Emocional"</span>… Que
-                  faz seu marido voltar a sentir o mesmo desejo e admiração do início.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white border border-[#FF0000]/30">
-              <CardContent className="p-6">
-                <Shield className="w-8 h-8 text-[#FF0000] mb-4" />
-                <p className="text-white text-lg leading-relaxed">
-                  Vai dominar <span className="text-[#FF0000] font-bold">técnicas de blindagem</span> emocional e
-                  espiritual para proteger a união…
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="shadow-[0_0_15px_rgba(255,0,0,0.3)] bg-black text-white border border-[#FF0000]/30">
-              <CardContent className="p-6">
-                <CheckCircle className="w-8 h-8 text-[#FF0000] mb-4" />
-                <p className="text-white text-lg leading-relaxed">
-                  E <span className="text-[#FF0000] font-bold">restaurar o respeito e a admiração</span> sem brigar,
-                  vigiar ou implorar.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6">
+              <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 text-base font-bold">
+                💠 A Revolução da Consciência Feminina Começa Aqui
+              </Badge>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-lg p-8 md:p-10 border border-pink-500/30 shadow-[0_0_30px_rgba(236,72,153,0.3)] mb-8">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 mb-6">
+              Por trás do amor, existem <span className="text-pink-400 font-semibold">códigos neurológicos e hormonais</span> que determinam como você se conecta, se apaixona e se apega.
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 mb-6">
+              Quando você entende esses códigos, você reprograma o seu sistema afetivo — e deixa de <span className="text-pink-400 font-semibold">reagir</span>, para começar a <span className="text-pink-400 font-semibold">atrair</span>.
+            </p>
+            <div className="bg-black/40 rounded-lg p-6 border-l-4 border-pink-500">
+              <p className="text-xl md:text-2xl font-bold text-white">
+                Este não é mais um conteúdo de "autoajuda".
+              </p>
+              <p className="text-lg md:text-xl text-white/90 mt-4">
+                É uma fusão entre neurociência afetiva, psicologia relacional e energia feminina — escrita para mulheres que querem viver o <span className="text-pink-400 font-semibold">amor consciente</span>, e não o amor condicionado.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Prova Social Section */}
-      <section className="py-8 md:py-16 px-4 bg-[#FF0000] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtMS4zNiAwLTIuNTEuOTUtMi44MyAyLjI0LS4xNS42MS0uNzYgMS0xLjM4Ljg1LS42MS0uMTUtMS0uNzYtLjg1LTEuMzguNTMtMi4xNSAyLjQ1LTMuNzEgNC43MS0zLjcxIDIuNyAwIDQuOSAyLjE5IDQuOSA0Ljl2NC45SDM2di00LjljMC0uNTQtLjQ2LTEtMS0xeiIvPjxwYXRoIGQ9Ik0zMCAzMGMwLTMuMzEgMi42OS02IDYtNnM2IDIuNjkgNiA2LTIuNjkgNi02IDYtNi0yLjY5LTYtNnptNiA0YzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHoiLz48L2c+PC9zdmc+')] opacity-10"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            Resultados <span className="text-black">Comprovados</span>
-          </h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8 border border-white/20">
-            <Sparkles className="w-12 h-12 text-white mx-auto mb-6" />
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              O Blindagem Contra Amantes já ajudou <span className="font-bold">centenas de mulheres</span> a recuperar
-              seus casamentos… Mesmo em situações extremas de traição confirmada.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed font-semibold">
-              E é o <span className="font-bold">único do mercado</span> com abordagem psicológica, emocional… E, para
-              quem desejar, também espiritual.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Urgência Section */}
-      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FF0000]/20 to-black"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="bg-black text-white rounded-lg p-8 mb-12 border border-[#FF0000] shadow-[0_0_20px_rgba(255,0,0,0.3)]">
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-[#FF0000]">"Mas será que não é tarde demais?"</h2>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              <span className="text-[#FF0000] font-bold">Não.</span> Enquanto houver vínculo emocional, há chance.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              O problema é que a maioria das mulheres <span className="text-[#FF0000] font-bold">espera demais</span>…
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed font-semibold">
-              E quando percebe, a amante já entrou, instalou-se emocionalmente e{" "}
-              <span className="text-[#FF0000] font-bold">virou um problema sério</span>.
-            </p>
-          </div>
-          <Button
-            onClick={handleCTA}
-            className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
-          >
-            Quero blindar meu relacionamento
-          </Button>
-          <p className="text-white text-lg leading-relaxed mt-8 mb-4">
-            <span className="text-[#FF0000] font-bold">Proteja</span> o que é seu.{" "}
-            <span className="text-[#FF0000] font-bold">Restaure</span> o que ainda pode ser salvo.
-          </p>
-          <p className="text-white text-lg leading-relaxed font-semibold">
-            Transforme sua posição dentro do seu relacionamento – de insegura para{" "}
-            <span className="text-[#FF0000] font-bold">respeitada</span>. De esquecida para
-            <span className="text-[#FF0000] font-bold"> indispensável</span>.
-          </p>
-        </div>
-      </section>
-
-      {/* Bônus Section */}
-      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+      {/* Ciência do Magnetismo */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-purple-950/20 to-black relative overflow-hidden">
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            Bônus <span className="text-[#FF0000]">Exclusivos</span> Por Tempo Limitado
+          <div className="text-center mb-12">
+            <Brain className="w-16 h-16 text-pink-500 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+              🧠 A Ciência do <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Magnetismo Feminino</span>
+            </h2>
+            <p className="text-xl text-white/80 mb-8">Você vai descobrir:</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <Zap className="w-10 h-10 text-pink-400 mb-4" />
+                <p className="text-white text-lg leading-relaxed">
+                  Os <span className="text-pink-400 font-bold">gatilhos neurológicos</span> que ativam o vínculo emocional masculino.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <Heart className="w-10 h-10 text-pink-400 mb-4" />
+                <p className="text-white text-lg leading-relaxed">
+                  Como <span className="text-pink-400 font-bold">desprogramar o padrão de apego ansioso</span> e reconectar-se à sua essência.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <Brain className="w-10 h-10 text-pink-400 mb-4" />
+                <p className="text-white text-lg leading-relaxed">
+                  O segredo da <span className="text-pink-400 font-bold">vasopressina</span>, o hormônio do vínculo — e como despertar sua liberação natural.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <Sparkles className="w-10 h-10 text-pink-400 mb-4" />
+                <p className="text-white text-lg leading-relaxed">
+                  Os <span className="text-pink-400 font-bold">comandos energéticos e linguísticos</span> que reposicionam sua presença, sem jogos ou manipulação.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Transformação Section */}
+      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            💋 Transforme Sua Dor em <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Presença Magnética</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-            <Card className="border-2 border-[#FF0000] shadow-[0_0_20px_rgba(255,0,0,0.4)] relative bg-black text-white">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-[#FF0000] text-white px-4 py-2 text-sm font-bold">BÔNUS #1</Badge>
+
+          <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-lg p-8 md:p-10 border border-pink-500/30 shadow-[0_0_30px_rgba(236,72,153,0.3)] mb-8">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 mb-6">
+              Toda mulher carrega uma história de amor mal resolvido.
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 mb-6">
+              Mas poucas transformam essa história em <span className="text-pink-400 font-bold">presença magnética</span> — o tipo de energia que é sentida, lembrada e desejada, <span className="text-pink-400 font-semibold">mesmo no silêncio</span>.
+            </p>
+            <div className="bg-black/50 rounded-lg p-6 border-l-4 border-pink-500 mt-8">
+              <p className="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-4">
+                O Apego Magnético é o seu ritual de retorno.
+              </p>
+              <p className="text-lg md:text-xl text-white/90">
+                Um mergulho profundo onde ciência, emoção e espiritualidade se unem para reconstruir a mulher que não mendiga amor — <span className="text-pink-400 font-bold">ela o ativa</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Para Mulheres Que Decidiram */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-black to-purple-950/30 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <Crown className="w-16 h-16 text-pink-500 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+              👑 Para Mulheres Que Decidiram <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Retomar o Trono</span>
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-lg p-8 mb-8 border border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.2)]">
+            <p className="text-xl md:text-2xl text-center text-white font-semibold mb-8">
+              Você não foi feita para disputar atenção.
+            </p>
+            <p className="text-xl md:text-2xl text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 font-bold mb-12">
+              Você foi feita para ser lembrada, respeitada e escolhida pela energia que emana.
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-4 bg-black/40 p-4 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                <p className="text-lg text-white/90">
+                  A <span className="text-pink-400 font-semibold">linguagem energética</span> que desperta o instinto de compromisso.
+                </p>
               </div>
-              <CardContent className="p-8 text-center">
-                <Gift className="w-12 h-12 text-[#FF0000] mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-4">"O Amor como Reforma"</h3>
-                <p className="text-white leading-relaxed">
-                  O guia extra "O Amor como Reforma" – para{" "}
-                  <span className="text-[#FF0000] font-bold">restaurar os fundamentos</span> do seu casamento com
-                  maturidade e sabedoria
+              <div className="flex items-start gap-4 bg-black/40 p-4 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                <p className="text-lg text-white/90">
+                  <span className="text-pink-400 font-semibold">Protocolos de presença</span> que criam conexões autênticas e duradouras.
+                </p>
+              </div>
+              <div className="flex items-start gap-4 bg-black/40 p-4 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                <p className="text-lg text-white/90">
+                  A arte de atrair <span className="text-pink-400 font-semibold">vínculos seguros</span>, sem se diminuir para caber.
+                </p>
+              </div>
+              <div className="flex items-start gap-4 bg-black/40 p-4 rounded-lg">
+                <CheckCircle className="w-6 h-6 text-pink-400 flex-shrink-0 mt-1" />
+                <p className="text-lg text-white/90">
+                  O equilíbrio entre <span className="text-pink-400 font-semibold">vulnerabilidade e poder</span> — a alquimia do magnetismo feminino.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resultados Reais */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-purple-900/20 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            💫 Resultados Reais. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Transformações Profundas.</span>
+          </h2>
+
+          <div className="space-y-6 mb-12">
+            <Card className="border-2 border-pink-500/40 shadow-[0_0_25px_rgba(236,72,153,0.4)] bg-gradient-to-br from-purple-950/70 to-black text-white">
+              <CardContent className="p-8">
+                <div className="flex gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                </div>
+                <p className="text-lg md:text-xl italic text-white/90 leading-relaxed">
+                  "Depois do guia, ele não mudou — <span className="text-pink-400 font-bold">eu mudei</span>. E quando eu mudei, tudo à minha volta se reorganizou."
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-2 border-[#FF0000] shadow-[0_0_20px_rgba(255,0,0,0.4)] relative bg-black text-white">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-[#FF0000] text-white px-4 py-2 text-sm font-bold">BÔNUS #2</Badge>
-              </div>
-              <CardContent className="p-8 text-center">
-                <Clock className="w-12 h-12 text-[#FF0000] mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-4">Acesso Vitalício</h3>
-                <p className="text-white leading-relaxed">
-                  Acesso <span className="text-[#FF0000] font-bold">vitalício</span> ao conteúdo completo do programa
-                  Blindagem Contra Amantes – para que você possa revisitar sempre que precisar fortalecer seu
-                  relacionamento
+
+            <Card className="border-2 border-pink-500/40 shadow-[0_0_25px_rgba(236,72,153,0.4)] bg-gradient-to-br from-purple-950/70 to-black text-white">
+              <CardContent className="p-8">
+                <div className="flex gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                </div>
+                <p className="text-lg md:text-xl italic text-white/90 leading-relaxed">
+                  "Aprendi a ser <span className="text-pink-400 font-bold">presença</span>, não ausência disfarçada de amor."
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/40 shadow-[0_0_25px_rgba(236,72,153,0.4)] bg-gradient-to-br from-purple-950/70 to-black text-white">
+              <CardContent className="p-8">
+                <div className="flex gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                  <Sparkles className="w-5 h-5 text-pink-400" />
+                </div>
+                <p className="text-lg md:text-xl italic text-white/90 leading-relaxed">
+                  "Hoje, eu não espero ser escolhida. Eu me torno <span className="text-pink-400 font-bold">impossível de esquecer</span>."
                 </p>
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* O Que Você Vai Receber */}
+      <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-purple-950/10"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            🔥 O Que Você Vai Receber <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Dentro do Guia</span>
+          </h2>
+
+          <div className="space-y-6 mb-12">
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg p-3">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-pink-400 mb-2">🧩 Neurociência Afetiva Feminina</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      Entenda o funcionamento do cérebro durante o apego, o desejo e a conexão.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg p-3">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-pink-400 mb-2">💞 Psicologia do Vínculo</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      Como transformar carência em magnetismo e empatia em presença.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg p-3">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-pink-400 mb-2">⚡ Rituais de Ativação Emocional</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      Ferramentas práticas para elevar sua frequência e expandir sua presença energética.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg p-3">
+                    <MessageCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-pink-400 mb-2">🎯 Comandos e Frases de Ativação</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      Linguagem estratégica para comunicar o seu valor de forma irresistível.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-pink-500/30 shadow-[0_0_20px_rgba(236,72,153,0.3)] bg-gradient-to-br from-purple-950/50 to-black text-white">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg p-3">
+                    <Moon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-pink-400 mb-2">🌕 Reconexão Espiritual Feminina</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      O retorno à energia da mulher que lidera com alma e atrai com verdade.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="text-center">
-            <div className="bg-[#FF0000] text-white rounded-lg p-6 mb-8 inline-block shadow-[0_0_15px_rgba(255,0,0,0.5)]">
-              <p className="text-lg font-semibold flex items-center justify-center">
-                <Clock className="w-5 h-5 mr-2" /> Mas atenção: esse combo de bônus será retirado em breve.
-              </p>
-            </div>
+            <Button
+              onClick={handleCTA}
+              className="w-full max-w-md mx-auto bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-bold py-4 px-8 text-base md:text-lg rounded-full shadow-[0_0_20px_rgba(236,72,153,0.6)] transform hover:scale-105 transition-all"
+            >
+              Despertar Meu Magnetismo
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Escassez Final Section */}
-      <section className="py-8 md:py-16 px-4 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FF0000]/30 to-black"></div>
+      {/* Retorne ao Seu Poder */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-to-b from-purple-950/30 to-black relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="bg-[#FF0000]/10 rounded-lg p-8 mb-8 border border-[#FF0000]/30 shadow-[0_0_20px_rgba(255,0,0,0.2)]">
-            <Lock className="w-12 h-12 text-[#FF0000] mx-auto mb-6" />
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Se você sair dessa página, <span className="text-[#FF0000] font-bold">não sei se conseguirá voltar</span>{" "}
-              com o mesmo acesso.
+          <div className="mb-12">
+            <Sparkles className="w-16 h-16 text-pink-500 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+              ✨ Retorne ao Seu Poder. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Retorne ao Seu Trono.</span>
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-lg p-8 md:p-10 border border-pink-500/30 shadow-[0_0_30px_rgba(236,72,153,0.3)] mb-8">
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">
+              Não é sobre conquistar ninguém.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed mb-6">
-              Você pode continuar como está… com dúvidas, inseguranças e medo do que pode acontecer…
+            <p className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 font-bold mb-8">
+              É sobre relembrar quem você é quando está inteira.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed font-semibold">
-              Ou pode dar o passo que <span className="text-[#FF0000] font-bold">milhares de mulheres</span> estão
-              dando, antes que seja tarde.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
+              Este guia é para as mulheres que decidiram sair do ciclo da dor, da espera e da autossabotagem —
+            </p>
+            <p className="text-lg md:text-xl text-pink-300 font-semibold leading-relaxed">
+              e entrar na era da presença magnética e do amor consciente.
             </p>
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            A escolha é sua. <span className="text-[#FF0000]">Eu só te mostrei o caminho.</span>
-          </h2>
-          <Button
-            onClick={handleCTA}
-            className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
-          >
-            Quero blindar meu relacionamento
-          </Button>
+
+          <div className="bg-black/50 rounded-lg p-8 mb-8 border-2 border-pink-500/50 shadow-[0_0_25px_rgba(236,72,153,0.4)]">
+            <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-6">
+              💎 Apego Magnético: O Início da Sua Virada
+            </h3>
+            <div className="space-y-4 text-lg md:text-xl text-white/90">
+              <p className="flex items-center justify-center gap-3">
+                <CheckCircle className="w-6 h-6 text-pink-400" />
+                <span>Liberte-se da busca.</span>
+              </p>
+              <p className="flex items-center justify-center gap-3">
+                <CheckCircle className="w-6 h-6 text-pink-400" />
+                <span>Ative sua presença.</span>
+              </p>
+              <p className="flex items-center justify-center gap-3">
+                <CheckCircle className="w-6 h-6 text-pink-400" />
+                <span>E torne-se a mulher que deixa marcas — não por necessidade, mas por verdade.</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              🔮 Escolha o Seu Caminho:
+            </h3>
+            <Button
+              onClick={handleCTA}
+              className="w-full max-w-md mx-auto bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-bold py-6 px-8 text-lg md:text-xl rounded-full shadow-[0_0_30px_rgba(236,72,153,0.7)] transform hover:scale-105 transition-all"
+            >
+              👉 Despertar Meu Magnetismo
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-8 md:py-16 px-4 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FF0000]/5"></div>
+        <div className="absolute inset-0 bg-purple-950/10"></div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_8px_rgba(255,0,0,0.5)]">
-            Perguntas <span className="text-[#FF0000]">Frequentes</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            Perguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Frequentes</span>
           </h2>
           <div className="space-y-4">
             {faqData.map((faq, index) => (
-              <Card key={index} className="bg-black border border-[#FF0000]/30 shadow-[0_0_10px_rgba(255,0,0,0.2)]">
+              <Card key={index} className="bg-black border border-pink-500/30 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
                 <CardContent className="p-0">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full p-6 text-left flex justify-between items-center hover:bg-[#FF0000]/5 transition-colors"
+                    className="w-full p-6 text-left flex justify-between items-center hover:bg-purple-900/10 transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#FF0000] transition-transform ${openFaq === index ? "rotate-180" : ""}`}
+                      className={`w-5 h-5 text-pink-400 transition-transform ${openFaq === index ? "rotate-180" : ""}`}
                     />
                   </button>
                   {openFaq === index && (
@@ -470,9 +558,9 @@ export default function BlindagemLanding() {
           <div className="text-center mt-12">
             <Button
               onClick={handleCTA}
-              className="w-full max-w-md mx-auto bg-[#FF0000] text-white hover:bg-[#FF0000]/90 font-bold py-4 px-6 md:px-8 text-base md:text-lg rounded-full shadow-[0_0_15px_rgba(255,0,0,0.7)] transform hover:scale-105 transition-all border-2 border-[#FF0000]/50"
+              className="w-full max-w-md mx-auto bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-bold py-4 px-8 text-base md:text-lg rounded-full shadow-[0_0_20px_rgba(236,72,153,0.6)] transform hover:scale-105 transition-all"
             >
-              Quero blindar meu relacionamento
+              Despertar Meu Magnetismo
             </Button>
           </div>
         </div>
@@ -481,10 +569,10 @@ export default function BlindagemLanding() {
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-20 md:bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/5511999999999?text=Olá! Tenho interesse no método Blindagem Contra Amantes"
+          href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Apego Magnético"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#FF0000] hover:bg-[#FF0000]/90 text-white p-3 rounded-full shadow-[0_0_20px_rgba(255,0,0,0.6)] transform hover:scale-110 transition-all flex items-center justify-center group"
+          className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-[0_0_25px_rgba(236,72,153,0.6)] transform hover:scale-110 transition-all flex items-center justify-center group"
         >
           <div className="w-8 h-8 relative">
             <svg
@@ -511,15 +599,15 @@ export default function BlindagemLanding() {
       <div className="h-20 md:h-0"></div>
 
       {/* Copyright Section */}
-      <footer className="py-6 px-4 bg-black border-t border-[#FF0000]/20">
+      <footer className="py-6 px-4 bg-black border-t border-pink-500/20">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-white/70 text-sm">
-            © 2024 Blindagem Contra Amantes. Desenvolvido por{" "}
+            © 2024 Apego Magnético. Desenvolvido por{" "}
             <a 
               href="https://www.devpro.fun" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-[#FF0000] font-semibold hover:text-[#FF0000]/80 transition-colors"
+              className="text-pink-400 font-semibold hover:text-pink-300 transition-colors"
             >
               DevPro
             </a>

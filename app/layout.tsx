@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Blindagem Contra Amantes - Proteja Seu Casamento",
+  title: "Apego Magnético - Desperte Sua Presença Feminina",
   description:
-    "Método estratégico para proteger seu relacionamento contra influências externas e reconectar com seu marido.",
+    "O Guia Que Desperta Sua Presença Feminina, Reativa Seu Poder e Cria Conexões Impossíveis de Esquecer",
 }
 
 export default function RootLayout({
