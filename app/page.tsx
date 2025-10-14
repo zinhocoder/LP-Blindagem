@@ -9,8 +9,8 @@ import { useState } from "react"
 
 export default function ApegoMagnetico() {
   const handleCTA = () => {
-    console.log("CTA clicado - redirecionar para checkout");
-    window.open("https://pay.kiwify.com.br/2467E0g", "_blank");
+    console.log("CTA clicado - redirecionar para WhatsApp");
+    window.open("https://wa.me/5521981530868?text=Olá! Tenho interesse no Apego Magnético", "_blank");
   }
 
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -569,7 +569,7 @@ export default function ApegoMagnetico() {
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-20 md:bottom-6 right-6 z-50">
         <a
-          href="https://wa.me/5511999999999?text=Olá! Tenho interesse no Apego Magnético"
+          href="https://wa.me/5521981530868?text=Olá! Tenho interesse no Apego Magnético"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-[0_0_25px_rgba(236,72,153,0.6)] transform hover:scale-110 transition-all flex items-center justify-center group"
