@@ -81,9 +81,15 @@ export default function ApegoMagnetico() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full text-sm font-bold mb-8 shadow-lg">
-                <Crown className="w-5 h-5" />
-                Portal de Acesso Exclusivo
+              <div className="flex flex-col items-center lg:items-start gap-3 mb-8">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
+                  <Crown className="w-5 h-5" />
+                  Portal de Acesso Exclusivo
+                </div>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-red-600 text-black px-5 py-2 rounded-full text-xs font-extrabold shadow-xl border border-yellow-300/40">
+                  <span className="line-through text-black/70">de R$ 97</span>
+                  <span className="text-black">por R$ 67</span>
+                </div>
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
@@ -114,7 +120,7 @@ export default function ApegoMagnetico() {
                 onClick={handleCTA}
                   className="flex-1 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-8 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
                 >
-                  🔥 Despertar Meu Magnetismo
+                  🔥 Despertar Meu Magnetismo por R$ 67
                   <ArrowRight className="w-6 h-6 ml-3" />
                 </Button>
                 <Button
@@ -175,6 +181,76 @@ export default function ApegoMagnetico() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Oferta de Lançamento Section */}
+      <section className="relative py-14 md:py-20 px-4 bg-gradient-to-br from-black via-red-950 to-black overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-64 h-64 bg-red-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[110%] h-0.5 bg-gradient-to-r from-transparent via-red-700/30 to-transparent"></div>
+        </div>
+        <div className="max-w-5xl mx-auto relative z-10">
+          <Card className="border-2 border-red-500/40 bg-gradient-to-br from-red-950/70 via-black to-red-950/70 backdrop-blur-sm shadow-2xl text-white">
+            <CardContent className="p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div className="md:col-span-2">
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-red-600 text-black px-4 py-2 rounded-full text-xs font-extrabold shadow-xl border border-yellow-300/40 mb-4">
+                    Oferta de Lançamento
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black leading-tight mb-3">
+                    Entre agora por <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">R$ 67</span>
+                  </h3>
+                  <p className="text-red-100 text-lg mb-6">
+                    Condição especial de lançamento. Vagas limitadas. Sem mensalidade. Acesso imediato.
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-red-100">
+                    <li className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      Acesso vitalício + atualizações
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center">
+                        <Star className="w-4 h-4 text-black" />
+                      </div>
+                      Protocolos práticos e aplicáveis
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+                        <Shield className="w-4 h-4 text-white" />
+                      </div>
+                      Garantia de satisfação
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center">
+                        <Users className="w-4 h-4 text-black" />
+                      </div>
+                      Comunidade de alunas
+                    </li>
+                  </ul>
+                </div>
+                <div className="md:col-span-1">
+                  <div className="bg-black/40 rounded-2xl p-6 border border-red-500/30 text-center">
+                    <div className="text-sm text-red-200 mb-2">de</div>
+                    <div className="text-3xl font-extrabold line-through text-red-300">R$ 97</div>
+                    <div className="h-px my-3 bg-gradient-to-r from-transparent via-red-600/50 to-transparent"></div>
+                    <div className="text-sm text-red-200 mb-1">por</div>
+                    <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">R$ 67</div>
+                    <div className="text-xs text-red-300 mt-2">à vista no WhatsApp</div>
+                    <Button
+                      onClick={handleCTA}
+                      className="mt-6 w-full bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-black py-4 px-6 text-lg rounded-xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
+                    >
+                      Garantir por R$ 67
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -240,6 +316,9 @@ export default function ApegoMagnetico() {
       {/* Material Autoral Section */}
       <section className="py-16 md:py-24 px-4 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 via-transparent to-red-900/5"></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src="/images/woman.png" alt="Fundo mulher" fill className="object-cover opacity-10 mix-blend-lighten" />
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <Badge className="bg-gradient-to-r from-red-800 to-red-900 text-white px-8 py-4 text-lg font-bold mb-8 shadow-lg">
@@ -247,8 +326,10 @@ export default function ApegoMagnetico() {
             </Badge>
           </div>
           
-          <Card className="border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white mb-12">
-            <CardContent className="p-12">
+          <Card className="relative border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white mb-12">
+            <div className="pointer-events-none absolute -inset-px rounded-[0.75rem] bg-gradient-to-r from-yellow-500/20 to-red-600/20"></div>
+            <CardContent className="relative p-12">
+              <div className="h-1.5 w-28 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-8"></div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <p className="text-xl md:text-2xl leading-relaxed text-red-100 mb-8">
@@ -267,8 +348,8 @@ export default function ApegoMagnetico() {
                   </p>
                 </div>
               </div>
-              </CardContent>
-            </Card>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -404,14 +485,19 @@ export default function ApegoMagnetico() {
       {/* O Que Você Deseja Section */}
       <section className="py-16 md:py-24 px-4 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 via-transparent to-red-900/5"></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src="/images/desejahero.png" alt="Fundo Deseja" fill className="object-cover opacity-10 mix-blend-lighten" />
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white text-center mb-16 leading-tight">
             Este é um guia para você que <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600">deseja:</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <Card className="border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
-              <CardContent className="p-8">
+            <Card className="relative border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-900/60 via-black/70 to-red-950/60 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-r from-yellow-500/15 to-red-600/15"></div>
+              <CardContent className="relative p-8">
+                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-6"></div>
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Shield className="w-8 h-8 text-white" />
@@ -420,14 +506,16 @@ export default function ApegoMagnetico() {
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Parar de viver ciclos de abandono</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
                       Apego ansioso e relações unilaterais que te esgotam emocionalmente.
-            </p>
-          </div>
-        </div>
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
-              <CardContent className="p-8">
+            <Card className="relative border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-900/60 via-black/70 to-red-950/60 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-r from-yellow-500/15 to-red-600/15"></div>
+              <CardContent className="relative p-8">
+                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-6"></div>
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Heart className="w-8 h-8 text-white" />
@@ -436,18 +524,20 @@ export default function ApegoMagnetico() {
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Compreender a diferença entre atrair e manter</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
                       Um vínculo real que se aprofunda com o tempo, não se esgota.
-            </p>
-          </div>
-        </div>
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
-              <CardContent className="p-8">
+            <Card className="relative border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-900/60 via-black/70 to-red-950/60 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-r from-yellow-500/15 to-red-600/15"></div>
+              <CardContent className="relative p-8">
+                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-6"></div>
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Crown className="w-8 h-8 text-white" />
-              </div>
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Despertar sua energia feminina consciente</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
@@ -458,12 +548,14 @@ export default function ApegoMagnetico() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-950/50 via-black to-red-950/50 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
-              <CardContent className="p-8">
+            <Card className="relative border-2 border-red-500/30 shadow-2xl bg-gradient-to-br from-red-900/60 via-black/70 to-red-950/60 backdrop-blur-sm text-white hover:scale-105 transition-all duration-300">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-r from-yellow-500/15 to-red-600/15"></div>
+              <CardContent className="relative p-8">
+                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-6"></div>
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Star className="w-8 h-8 text-white" />
-              </div>
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Reconquistar a si mesma primeiro</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
@@ -480,7 +572,7 @@ export default function ApegoMagnetico() {
               onClick={handleCTA}
               className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-12 text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
             >
-              🔥 Despertar Meu Magnetismo Agora
+              🔥 Despertar Meu Magnetismo Agora por R$ 67
               <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
           </div>
@@ -542,7 +634,7 @@ export default function ApegoMagnetico() {
             onClick={handleCTA}
               className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-black py-8 px-16 text-2xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
           >
-              👉 Despertar Meu Magnetismo
+              👉 Despertar Meu Magnetismo por R$ 67
               <ArrowRight className="w-8 h-8 ml-4" />
           </Button>
           </div>
@@ -552,14 +644,18 @@ export default function ApegoMagnetico() {
       {/* FAQ Section */}
       <section className="py-16 md:py-24 px-4 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-900/5 via-transparent to-red-900/5"></div>
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src="/images/faqhero.png" alt="Fundo FAQ" fill className="object-cover opacity-10 mix-blend-lighten" />
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white text-center mb-16 leading-tight">
-            Perguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600">Frequentes</span>
+            Perguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-red-600">Frequentes</span>
           </h2>
           <div className="space-y-6">
             {faqData.map((faq, index) => (
-              <Card key={index} className="bg-gradient-to-r from-red-950/50 to-black border border-red-500/30 shadow-xl backdrop-blur-sm">
-                <CardContent className="p-0">
+              <Card key={index} className="relative bg-gradient-to-r from-red-950/50 to-black border border-red-500/30 shadow-xl backdrop-blur-sm">
+                <div className="pointer-events-none absolute -inset-px rounded-[0.75rem] bg-gradient-to-r from-yellow-500/15 to-red-600/15"></div>
+                <CardContent className="relative p-0">
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full p-8 text-left flex justify-between items-center hover:bg-red-900/10 transition-colors"
@@ -571,6 +667,7 @@ export default function ApegoMagnetico() {
                   </button>
                   {openFaq === index && (
                     <div className="px-8 pb-8">
+                      <div className="h-1 w-20 rounded-full bg-gradient-to-r from-yellow-500 to-red-600 mb-4"></div>
                       <p className="text-red-100 leading-relaxed text-lg">{faq.answer}</p>
                     </div>
                   )}
@@ -583,7 +680,7 @@ export default function ApegoMagnetico() {
               onClick={handleCTA}
               className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-12 text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
             >
-              🔥 Despertar Meu Magnetismo Agora
+              🔥 Despertar Meu Magnetismo Agora por R$ 67
               <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
           </div>
