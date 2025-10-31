@@ -118,16 +118,16 @@ export default function ApegoMagnetico() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button
                 onClick={handleCTA}
-                  className="flex-1 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-8 text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-4 md:py-6 px-4 md:px-8 text-base md:text-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50 whitespace-normal break-words text-center"
                 >
                   🔥 Despertar Meu Magnetismo por R$ 67
-                  <ArrowRight className="w-6 h-6 ml-3" />
+                  <ArrowRight className="w-6 h-6" />
                 </Button>
                 <Button
                   variant="outline"
-                  className="flex-1 border-2 border-red-500/50 text-red-400 hover:bg-red-500/10 font-bold py-6 px-8 text-lg rounded-2xl backdrop-blur-sm"
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 border-2 border-red-500/50 text-red-400 hover:bg-red-500/10 font-bold py-4 md:py-6 px-4 md:px-8 text-base md:text-lg rounded-2xl backdrop-blur-sm whitespace-normal break-words text-center"
                 >
-                  <Users className="w-6 h-6 mr-3" />
+                  <Users className="w-6 h-6" />
                   Ver Depoimentos
               </Button>
               </div>
@@ -198,7 +198,7 @@ export default function ApegoMagnetico() {
                 <div className="md:col-span-2">
                   <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-red-600 text-black px-4 py-2 rounded-full text-xs font-extrabold shadow-xl border border-yellow-300/40 mb-4">
                     Oferta de Lançamento
-                  </div>
+            </div>
                   <h3 className="text-3xl md:text-4xl font-black leading-tight mb-3">
                     Entre agora por <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">R$ 67</span>
                   </h3>
@@ -240,14 +240,14 @@ export default function ApegoMagnetico() {
                     <div className="text-sm text-red-200 mb-1">por</div>
                     <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">R$ 67</div>
                     <div className="text-xs text-red-300 mt-2">à vista no WhatsApp</div>
-                    <Button
-                      onClick={handleCTA}
+              <Button
+                onClick={handleCTA}
                       className="mt-6 w-full bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-black py-4 px-6 text-lg rounded-xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
-                    >
+              >
                       Garantir por R$ 67
-                    </Button>
-                  </div>
-                </div>
+              </Button>
+            </div>
+          </div>
               </div>
             </CardContent>
           </Card>
@@ -291,8 +291,8 @@ export default function ApegoMagnetico() {
                   </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
         </div>
       </section>
 
@@ -506,9 +506,9 @@ export default function ApegoMagnetico() {
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Parar de viver ciclos de abandono</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
                       Apego ansioso e relações unilaterais que te esgotam emocionalmente.
-                    </p>
-                  </div>
-                </div>
+            </p>
+          </div>
+        </div>
               </CardContent>
             </Card>
 
@@ -524,9 +524,9 @@ export default function ApegoMagnetico() {
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Compreender a diferença entre atrair e manter</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
                       Um vínculo real que se aprofunda com o tempo, não se esgota.
-                    </p>
-                  </div>
-                </div>
+            </p>
+          </div>
+        </div>
               </CardContent>
             </Card>
 
@@ -537,7 +537,7 @@ export default function ApegoMagnetico() {
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Crown className="w-8 h-8 text-white" />
-                  </div>
+              </div>
                   <div>
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Despertar sua energia feminina consciente</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
@@ -555,7 +555,7 @@ export default function ApegoMagnetico() {
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Star className="w-8 h-8 text-white" />
-                  </div>
+              </div>
                   <div>
                     <h3 className="text-2xl font-bold text-red-400 mb-4">Reconquistar a si mesma primeiro</h3>
                     <p className="text-lg text-red-100 leading-relaxed">
@@ -570,10 +570,10 @@ export default function ApegoMagnetico() {
           <div className="text-center">
             <Button
               onClick={handleCTA}
-              className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-12 text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-4 md:py-6 px-4 md:px-12 text-base md:text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50 whitespace-normal break-words text-center"
             >
               🔥 Despertar Meu Magnetismo Agora por R$ 67
-              <ArrowRight className="w-6 h-6 ml-3" />
+              <ArrowRight className="w-6 h-6" />
             </Button>
           </div>
         </div>
@@ -632,10 +632,10 @@ export default function ApegoMagnetico() {
             </p>
           <Button
             onClick={handleCTA}
-              className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-black py-8 px-16 text-2xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-black py-5 md:py-8 px-6 md:px-16 text-lg md:text-2xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50 whitespace-normal break-words text-center"
           >
               👉 Despertar Meu Magnetismo por R$ 67
-              <ArrowRight className="w-8 h-8 ml-4" />
+              <ArrowRight className="w-8 h-8" />
           </Button>
           </div>
         </div>
@@ -678,10 +678,10 @@ export default function ApegoMagnetico() {
           <div className="text-center mt-16">
             <Button
               onClick={handleCTA}
-              className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-6 px-12 text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-500 hover:to-red-700 font-bold py-4 md:py-6 px-4 md:px-12 text-base md:text-xl rounded-2xl shadow-2xl transform hover:scale-105 transition-all border-2 border-red-400/50 whitespace-normal break-words text-center"
             >
               🔥 Despertar Meu Magnetismo Agora por R$ 67
-              <ArrowRight className="w-6 h-6 ml-3" />
+              <ArrowRight className="w-6 h-6" />
             </Button>
           </div>
         </div>
@@ -716,19 +716,19 @@ export default function ApegoMagnetico() {
         </a>
       </div>
 
-      {/* Espaçamento para CTA fixo mobile */}
-      <div className="h-24 md:h-0"></div>
+      {/* Espaçamento para CTA fixo mobile e área segura */}
+      <div className="h-40 md:h-0 pb-[env(safe-area-inset-bottom)]"></div>
 
       {/* Copyright Section */}
-      <footer className="py-8 px-4 bg-black border-t border-red-500/20">
+      <footer className="relative z-20 py-8 px-4 bg-black border-t border-red-500/20 pb-[env(safe-area-inset-bottom)] pt-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-red-200 text-sm">
+          <p className="text-white text-sm">
             © 2024 Apego Magnético. Desenvolvido por{" "}
             <a 
               href="https://www.devpro.fun" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-red-400 font-semibold hover:text-red-300 transition-colors"
+              className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
             >
               DevPro
             </a>
